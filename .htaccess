@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets\|images|robots\.txt|css)
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+AddDefaultCharset UTF-8
